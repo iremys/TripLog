@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <ScrollView
+        android:id="@+id/svInoutWrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--스크롤뷰 때문에 사용-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <!--여행제목 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:gravity="center|center"
+                    android:background="@drawable/box_border"
+                    android:text="여행제목"
+                    />
+
+                <!--여행제목 상세-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/box_border"
+                    >
+
+                    <EditText
+                        android:id="@+id/etTripTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:background="@null"
+                        android:layout_margin="10dp"
+                        android:textSize="@dimen/input_font_size"
+                        android:inputType="text"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--./여행제목 외곽-->
+
+
+            <!--사용시간 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/input_font_size"
+                    android:gravity="center|center"
+                    android:background="@drawable/box_border"
+                    android:text="여행기간"
+                    />
+
+                <!--사용시간 상세-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/box_border"
+                    >
+
+                    <EditText
+                        android:id="@+id/etStartDate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:background="@null"
+                        android:layout_margin="10dp"
+                        android:textSize="@dimen/input_font_size"
+                        android:inputType="text"
+                        android:hint="2019-03-04"
+                        android:layout_weight="4"
+                        />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="@dimen/input_font_size"
+                        android:textColor="@color/black"
+                        android:text="~"
+                        android:layout_weight="1"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/etEndDate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:background="@null"
+                        android:layout_margin="10dp"
+                        android:textSize="@dimen/input_font_size"
+                        android:inputType="text"
+                        android:hint="2019-03-04"
+                        android:layout_weight="4"
+                        />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="@dimen/input_font_size"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--./사용시간 외곽-->
+
+
+
+
+            <!--버튼 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/btnTripSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="여행등록"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    />
+            </LinearLayout>
+            <!--./버튼 외곽-->
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

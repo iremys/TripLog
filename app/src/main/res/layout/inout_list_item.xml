@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llInoutItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inout_list_height"
+        android:orientation="horizontal"
+        android:background="@drawable/box_border"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tvUseDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="4"
+            android:gravity="center|left"
+            android:textStyle="bold"
+            android:text="(사용일)"
+            />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="4.5"
+            android:textStyle="bold"
+            android:gravity="center|left"
+            android:text="(사용제목)"
+            />
+
+        <TextView
+            android:id="@+id/tvBtnSync"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="1.5"
+            android:gravity="center|right"
+            android:text="동기"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inout_list_height"
+        android:orientation="horizontal"
+        android:background="@drawable/box_border"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tvInoutType"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="2.8"
+            android:gravity="center|left"
+            android:text="(타입)"
+            />
+
+        <TextView
+            android:id="@+id/tvMMethod"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="1.2"
+            android:gravity="center|left"
+            android:text="(m방법)"
+            />
+
+        <TextView
+            android:id="@+id/tvMPrice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="3"
+            android:gravity="center|right"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:text="(마이너스금액)"
+            />
+
+        <TextView
+            android:id="@+id/tvMUnitName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="3"
+            android:gravity="center|right"
+            android:text="(마이너스화폐)"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inout_list_height"
+        android:orientation="horizontal"
+        android:background="@drawable/box_border"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tvCateName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="2.8"
+            android:gravity="center|left"
+            android:text="(카테고리)"
+            />
+
+        <TextView
+            android:id="@+id/tvPMethod"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="1.2"
+            android:gravity="center|left"
+            android:text="(p방법)"
+            />
+
+        <TextView
+            android:id="@+id/tvPPrice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="3"
+            android:gravity="center|right"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:text="(플러스금액)"
+            />
+
+        <TextView
+            android:id="@+id/tvPUnitName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="3"
+            android:gravity="center|right"
+            android:text="(플러스화폐)"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inout_list_height"
+        android:orientation="horizontal"
+        android:background="@drawable/box_border"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tvLat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="5"
+            android:gravity="center|left"
+            android:text="(위도)"
+            />
+
+        <TextView
+            android:id="@+id/tvLon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/inout_list_font_size"
+            android:layout_weight="5"
+            android:gravity="center|left"
+            android:text="(경도)"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

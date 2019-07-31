@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TripLog</string>
+
+    <string-array name="unit">
+        <item>KRW</item>
+        <item>USD</item>
+        <item>THB</item>
+    </string-array>
+
+    <string-array name="outcate">
+        <item>식비</item>
+        <item>숙박</item>
+        <item>교통</item>
+        <item>관광</item>
+        <item>액티비티</item>
+        <item>기타</item>
+    </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_inout_image_viewer_activitiy">InoutImageViewerActivitiy</string>
+
+</resources>

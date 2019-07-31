@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:id="@+id/svInoutWrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--스크롤뷰 때문에 사용-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!--사용구분 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/input_font_size"
+                    android:gravity="center|center"
+                    android:background="@drawable/box_border"
+                    android:text="사용구분"
+                    />
+
+                <!--사용구분 상세-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/box_border"
+                    >
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbtnGoInWrite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="수입"
+                            android:textSize="@dimen/input_font_size"
+                            android:checked="true"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/rbtnGoOutWrite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="지출"
+                            android:textSize="@dimen/input_font_size"
+                            android:layout_weight="1"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/rbtnGoChangeWrite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="환전"
+                            android:textSize="@dimen/input_font_size"
+                            android:layout_weight="1"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/rbtnGoWithrowWrite"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="인출"
+                            android:textSize="@dimen/input_font_size"
+                            android:layout_weight="1"
+                            />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--./사용구분 외곽-->
+
+
+            <!--사용시간 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/input_font_size"
+                    android:gravity="center|center"
+                    android:background="@drawable/box_border"
+                    android:text="사용시간"
+                    />
+
+                <!--사용시간 상세-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/box_border"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvUseDate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="@dimen/input_font_size"
+                        android:textColor="@color/black"
+                        android:text="2019-07-10"
+                        android:layout_weight="3.2"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvUseTime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:textSize="@dimen/input_font_size"
+                        android:textColor="@color/black"
+                        android:text="23:50"
+                        android:layout_weight="1.8"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvSelectTimeZone"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:textSize="@dimen/input_font_size"
+                        android:textColor="@color/black"
+                        android:layout_weight="5"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--./사용시간 외곽-->
+
+            <!--금액 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/input_font_size"
+                    android:gravity="center|center"
+                    android:background="@drawable/box_border"
+                    android:text="입금금액"
+                    />
+
+                <!--금액 상세-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/box_border"
+                    >
+
+                    <EditText
+                        android:id="@+id/etPPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:hint="3000"
+                        android:background="@null"
+                        android:layout_margin="10dp"
+                        android:textSize="@dimen/input_font_size"
+                        android:inputType="numberDecimal"
+                        android:layout_weight="5"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvSelectPUnit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:background="@drawable/label"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:textSize="@dimen/input_font_size"
+                        android:textColor="@color/black"
+                        android:layout_weight="5"
+                        android:text="화폐선택 ▼"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--./금액 외곽-->
+
+            <!--/입금방법 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:gravity="center|center"
+                    android:background="@drawable/box_border"
+                    android:text="입금방법"
+                    />
+
+                <!--입금방법 상세-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/box_border"
+                    >
+
+                    <RadioGroup
+                        android:id="@+id/rgPMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/rbtnPBank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="통장"
+                            android:textSize="@dimen/input_font_size"
+                            android:layout_marginRight="15dp"
+                            android:checked="true"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/rbtnPCash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="현금"
+                            android:textSize="@dimen/input_font_size"
+                            android:layout_weight="1"
+                            />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--./입금방법 외곽-->
+
+
+            <!--내역 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:gravity="center|center"
+                    android:background="@drawable/box_border"
+                    android:text="사용내역"
+                    />
+
+                <!--내역 상세-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/box_border"
+                    >
+
+                    <EditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:background="@null"
+                        android:layout_margin="10dp"
+                        android:textSize="@dimen/input_font_size"
+                        android:inputType="text"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--./내역 외곽-->
+
+            <!--카테고리 외곽-->
+            <!--내역 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:gravity="center|center"
+                    android:background="@drawable/box_border"
+                    android:text="카테고리"
+                    />
+
+                <!--카테고리 상세-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/box_border"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvSelectCate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:background="@drawable/label"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:textSize="@dimen/input_font_size"
+                        android:textColor="@color/black"
+                        android:text="카테고리선택 ▼"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--./카테고리 외곽-->
+
+            <!--메모 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:gravity="center|center"
+                    android:background="@drawable/box_border"
+                    android:text="메모"
+                    />
+
+                <!--메모 상세-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/box_border"
+                    >
+
+                    <EditText
+                        android:id="@+id/etMemo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:background="@null"
+                        android:layout_margin="10dp"
+                        android:textSize="@dimen/input_font_size"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--./메모 외곽-->
+
+
+            <!--위치 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:gravity="center|center"
+                    android:background="@drawable/box_border"
+                    android:text="위치"
+                    />
+
+                <!--위치 상세-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/box_border"
+                    android:padding="5dp"
+                    >
+
+
+                    <LinearLayout
+                        android:id="@+id/llGoMap"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/label"
+                        android:layout_weight="7.5"
+                        >
+                        <TextView
+                            android:id="@+id/tvGPSLat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:textSize="@dimen/input_font_size"
+                            android:gravity="center|left"
+                            android:textColor="@color/black"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvGPSLon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:textSize="@dimen/input_font_size"
+                            android:gravity="center|left"
+                            android:textColor="@color/black"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/label"
+                        android:layout_weight="2.5"
+                        android:layout_marginLeft="5dp"
+                        >
+                        <TextView
+                            android:id="@+id/tvGPSInit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|center"
+                            android:background="@drawable/label"
+                            android:textSize="@dimen/input_font_size"
+                            android:textColor="@color/black"
+                            android:text="위치없음"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--./위치 외곽-->
+
+
+
+
+            <!--사진 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:gravity="center|center"
+                    android:background="@drawable/box_border"
+                    android:text="사진"
+                    />
+
+                <!--사진 상세-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/box_border"
+                    android:paddingBottom="5dp"
+                    >
+
+                    <!--사진 이미지 영역-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+
+                        >
+                        <TextView
+                            android:id="@+id/tvGoCamera"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center|center"
+                            android:background="@drawable/label"
+                            android:padding="5dp"
+                            android:textSize="@dimen/input_font_size"
+                            android:textColor="@color/black"
+                            android:text="카메라"
+                            android:layout_weight="5"
+                            android:layout_margin="5dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvGoGallery"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center|center"
+                            android:background="@drawable/label"
+                            android:padding="5dp"
+                            android:textSize="@dimen/input_font_size"
+                            android:textColor="@color/black"
+                            android:text="앨범"
+                            android:layout_weight="5"
+                            android:layout_margin="5dp"
+                            />
+
+                    </LinearLayout>
+
+                    <!--사진 이미지 영역-->
+                    <GridView
+                        android:id="@+id/gvImglist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="5"
+                        android:layout_margin="5dp"
+                        android:horizontalSpacing="2dp"
+                        >
+                    </GridView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--./사진 외곽-->
+
+
+
+            <!--버튼 외곽-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                    <Button
+                        android:id="@+id/btnInSave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="저장"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        />
+            </LinearLayout>
+            <!--./버튼 외곽-->
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

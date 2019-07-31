@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btnGoInout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용내역"
+            android:layout_weight="1"
+
+            />
+
+        <Button
+            android:id="@+id/btnGoBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="화폐별잔액"
+            android:layout_weight="1"
+
+            />
+
+        <Button
+            android:id="@+id/btnGoMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지도로보기"
+            android:layout_weight="1"
+
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGoOutWrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가계부작성"
+        android:layout_gravity="right"
+        android:layout_margin="10sp"
+        />
+
+    <ListView
+        android:id="@+id/lvInoutList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="5dp"
+        >
+    </ListView>
+
+
+
+</LinearLayout>
