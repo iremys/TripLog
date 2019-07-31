@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center|left"
                     android:textSize="@dimen/input_font_size"
-                    android:hint="쿼리입력 (연습용11)"
+                    android:hint="쿼리입력"
                     />
 
                 <Button
